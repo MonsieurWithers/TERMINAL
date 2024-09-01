@@ -1,0 +1,113 @@
+body {
+    background-color: black;
+    color: #D7FBFF;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+  
+  .radar {
+    width: 350px; /* Increased size */
+    height: 350px; /* Increased size */
+    background-color: #002240; /* dark blue */
+    border-radius: 50%;
+    border: 2px solid #D7FBFF; /* cyan */
+    position: relative;
+    overflow: hidden; /* Ensure points stay within bounds */
+  }
+  
+  .terminal {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .terminal p {
+    margin-top: 0;
+  }
+  
+  #command-input {
+    width: calc(100% - 40px);
+    padding: 10px;
+    font-family: monospace;
+    background-color: #000000; /* darker blue */
+    color: #D7FBFF;
+    border: 1px solid #D7FBFF;
+    outline: none;
+  }
+  
+  #terminal-output {
+    background-color: #000000;
+    color: #D7FBFF;
+    padding: 10px;
+    height: 200px;
+    overflow-y: scroll;
+    border: 1px solid #D7FBFF;
+    border-radius: 5px;
+  }
+  
+  .point {
+    position: absolute;
+    background-color: #D7FBFF; /* cyan */
+    width: 12px; /* Increased size */
+    height: 12px; /* Increased size */
+    border-radius: 50%;
+    opacity: 1;
+    animation: fadeOut 3s forwards;
+    transform: translate(-50%, -50%) scale(1); /* Start with normal scale */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px; /* Font size for ID */
+    color: #FF4500; /* Change text color to orange for better visibility */
+  }
+
+  .id-span {
+    position: absolute;
+    top: -20px; /* Position the ID above the point */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes scan {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(35); /* Adjust scale to reach the edge of the radar */
+      opacity: 0;
+    }
+  }
+  
+  #scan-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: scan 4s linear infinite; /* Slow down the scan animation */
+    transform: translate(-50%, -50%); /* Center the animation */
+  }
+  
+  

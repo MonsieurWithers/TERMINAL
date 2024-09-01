@@ -1,0 +1,90 @@
+body {
+    background-color: black;
+    color: #D7FBFF; /* Bleu très clair */
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Pas de scrollbars pour le body */
+}
+
+#terminal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px; /* Augmenté la largeur max */
+    height: 100%;
+    overflow-y: auto; /* Scrollbar pour le terminal */
+    scrollbar-width: thin; /* Scrollbar plus fine */
+    scrollbar-color: #D7FBFF black; /* Couleur de la scrollbar */
+}
+
+#terminal::-webkit-scrollbar {
+    width: 12px; /* Largeur de la scrollbar */
+}
+
+#terminal::-webkit-scrollbar-track {
+    background: black; /* Couleur de fond de la scrollbar */
+}
+
+#terminal::-webkit-scrollbar-thumb {
+    background-color: #D7FBFF; /* Couleur de la barre de défilement */
+    border-radius: 10px; /* Bords arrondis */
+    border: 3px solid black; /* Espace autour de la barre de défilement */
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#ascii-art {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#fake-code, #additional-text {
+    white-space: pre-wrap;
+    text-align: left;
+}
+
+#terminalOutput {
+    text-align: left;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#commandInput {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: black;
+    color: #D7FBFF; /* Bleu très clair */
+    border: 1px solid #D7FBFF; /* Bordure bleu très clair */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.red {
+    color: red;
+}
+
+.orange {
+    color: rgb(245, 183, 11);
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-5px, 5px); }
+    40% { transform: translate(-5px, -5px); }
+    60% { transform: translate(5px, 5px); }
+    80% { transform: translate(5px, -5px); }
+    100% { transform: translate(0); }
+}
+
+.glitch {
+    color: red;
+    animation: glitch 1s infinite;
+}
+
