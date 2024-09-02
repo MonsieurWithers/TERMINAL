@@ -218,13 +218,13 @@ function extractBeaconData(beaconId) {
   let driveLink;
   switch (beaconId) {
     case 'LR630':
-      driveLink = 'https://drive.google.com/file/d/1fXfpoS0FY4lHRovRn-CJhB-1FXYKWgj0/view?usp=drive_link';
+      driveLink = 'https://drive.google.com/file/d/1uK_aNLJWk_6nD1RpN3w1CNVbNZLXqtE1/view?usp=drive_link';
       break;
     case 'NN401':
-      driveLink = 'https://drive.google.com/file/d/1QsFdHTSLxUcy5wAoaOUS7KrplGneWZkN/view?usp=drive_link';
+      driveLink = 'https://drive.google.com/file/d/1X4010WXKJA9dIBtvuNsvt4KvVQHKGniU/view?usp=drive_link';
       break;
     case 'SB747':
-      driveLink = 'https://drive.google.com/file/d/1J5EjvFLuZOYZcO_aumAQxf55htqrM_ni/view?usp=drive_link';
+      driveLink = 'https://drive.google.com/file/d/13sYIeWVui8ctjlo5lIIaO-PDKXjSf5vI/view?usp=drive_link';
       break;
     default:
       terminalOutput.innerText += `Beacon ID ${beaconId} cannot be found.\n`;
